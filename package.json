@@ -4,7 +4,7 @@
   "description": "EMPOWER Admin",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server -w",
+    "dev": "nodemon app/server && webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "SweatWorks",
@@ -18,6 +18,11 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "moment-random": "^1.0.5",
+    "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.2",
@@ -28,6 +33,7 @@
     "webpack": "^4.30.0"
   },
   "devDependencies": {
+    "nodemon": "^1.18.11",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
   }
