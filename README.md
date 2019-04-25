@@ -19,3 +19,17 @@ The user should be able to search all publications by title. (This has to be pag
 
 Anything that is not specified here is up to your criteria, taking into account all the points mentioned above. 
 
+To start the application locally:
+```
+npm run dev
+```
+You can view it at http://localhost:3000/
+
+API endpoints you need to use to complete the challenege.
+```
+/authors - returns a list of all authors
+/authors/:id - returns an author by id
+/authors/:id/publications - returns an author by id and all of their publications
+/publications - returns all publications
+/search/:searchTerm - returns publications that their title includes the search term
+```

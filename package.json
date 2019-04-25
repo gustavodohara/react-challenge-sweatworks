@@ -4,7 +4,7 @@
   "description": "EMPOWER Admin",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app/server && webpack -w",
+    "dev": "webpack -w & nodemon app/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "SweatWorks",

@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
@@ -6,6 +7,11 @@ const { authors, publications } = require('./data')
 
 app.use(bodyParser())
 app.use(morgan('dev'))
+app.use(express.static(path.resolve('app/public')))
+
+app.get('/', (req, res, next) => {
+  res.sendFile(path.resolve('app/public/index.html'))
+})
 
 app.get('/authors', (req, res, next) => {
   res.json({ data: authors })
