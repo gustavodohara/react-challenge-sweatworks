@@ -1,4 +1,9 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Header from './common/Header';
+import Footer from './common/Footer';
+import PublicationPage from './publication/PublicationPage';
+import PageNotFound from './PageNotFound'
 
 class App extends React.Component {
 
@@ -11,11 +16,18 @@ class App extends React.Component {
   }
 
   render() {
-    const { title } = this.state
+    const { title } = this.state;
 
     return (
       <div>
-        <h1>{title}</h1>
+        <Header/>
+        <Switch>
+          <Route path="/" exact component={PublicationPage} />
+          <Route path="/4" component={PageNotFound} />
+          <Route component={PageNotFound} />
+        </Switch>
+
+        <Footer/>
       </div>
     )
   }
