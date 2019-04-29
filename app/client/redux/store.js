@@ -9,7 +9,7 @@ const defaultMiddlewares = [
 ];
 
 const composeMiddlewares = middlewares => {
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add suport for redux dev tools
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // add support for redux dev tools
   return composeEnhancers(applyMiddleware(...defaultMiddlewares, ...middlewares));
 };
 
